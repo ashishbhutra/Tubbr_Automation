@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TubbrTestSuite">
+
+    <parameter name="platform" value="Android 8.0"/>
+    <!--parameter name="udid" value="db1853d"/-->
+    <parameter name="udid" value="192.168.166.101:5555"/>
+    <parameter name="systemPort" value="8201"/>
+    <test name="Login Test" preserve-order ="true">
+        <classes>
+            <class name="e2e_Test.LoginFlow.loginTest"/>
+        </classes>
+    </test>
+</suite>
