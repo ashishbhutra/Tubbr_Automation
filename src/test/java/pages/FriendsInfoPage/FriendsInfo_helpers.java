@@ -4,6 +4,7 @@ import components.ExpectationHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.qameta.allure.Step;
 import org.testng.Assert;
 import pages.BasePage;
 
@@ -15,11 +16,13 @@ public class FriendsInfo_helpers extends BasePage {
     @AndroidFindBy(id = "com.tubbr:id/network_home_img_settings")
     private MobileElement settingIcon;
 
+    @Step("Verify Friends Info Page")
     public void verifyFriendInfoPage() {
         ExpectationHelper.waitForElementToBeVisible(settingIcon);
         Assert.assertEquals(settingIcon.isDisplayed(), true);
     }
 
+    @Step("Click on Setting Icon")
     public void goToSettingPage() {
         settingIcon.click();
     }

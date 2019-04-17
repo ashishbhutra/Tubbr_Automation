@@ -6,6 +6,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.testng.Assert;
 import pages.BasePage;
+import io.qameta.allure.Step;
 
 public class launchPage_helpers extends BasePage {
     @AndroidFindBy(id = "com.tubbr:id/pre_login_button_sign_in")
@@ -23,11 +24,13 @@ public class launchPage_helpers extends BasePage {
     @AndroidFindBy(xpath= "//android.widget.TextView(@text = '" + launchPage_constants.yourPersonalBlog + "'")
     private MobileElement youPersonalBlog;
 
+    @Step("Click On Sign In Button.")
      public void gotoSignIn() {
          ExpectationHelper.waitForElementToBeClickable(signInButton);
          signInButton.click();
      }
 
+    @Step("Verify Launch Page")
      public void verifyLaunchPage() {
          ExpectationHelper.waitForElementToBeVisible(alphaLogo);
          Assert.assertEquals(alphaLogo.isDisplayed(), true);

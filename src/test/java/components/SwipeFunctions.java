@@ -10,7 +10,6 @@ public class SwipeFunctions extends TestBase {
     public void setUpPage() {
 
     }
-
     public static void swipeLeft(float partOfScreen) {
         Dimension size = driver.manage().window().getSize();
 
