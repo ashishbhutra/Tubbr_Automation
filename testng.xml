@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TubbrTestSuite">
+<suite name="TubbrTestSuite" parallel="tests" thread-count="3">
 
     <parameter name="platform" value="Android 8.0"/>
     <!--parameter name="udid" value="db1853d"/-->
