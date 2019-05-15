@@ -8,6 +8,7 @@
     <parameter name="systemPort" value="8201"/>
     <test name="Login Test" preserve-order ="true">
         <classes>
+            <class name="e2e_Test.LoginFlow.loginValidation"/>
             <class name="e2e_Test.LoginFlow.loginTest"/>
         </classes>
     </test>
